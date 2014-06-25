@@ -14,6 +14,7 @@ After cloning the repository before running "vagrant up" you may want to make a 
 The virtual machine will mount a directory on your host machine.  This will allow you to continue developing as you normally would.  Currently the default location for development files is: **/var/www**.  If your development files are located elsewhere than you will want to make a modification to the configuration before provisioning the vm.
 
 Change synched folder location:
+
 1. Open the config.yaml file: puphpet/config.yaml
 2. Change vagrantfile-local:vm:synced_folder:6cH1AsAnXHnf:source to the location of your development folder.
 3. Save Changes
@@ -21,12 +22,10 @@ Change synched folder location:
 **Add Hosts Entry**
 The default host name is **local.dev**.  In order for you to access this domain on your host machine you will need to make an entry in your /etc/hosts file.
 
-1. Open /etc/hosts
-2. add:
+1. Open /etc/hosts and add:
 ```
 192.168.56.102  local.dev
 ```
-3. Save
 
 Usage
 ------------
@@ -45,10 +44,18 @@ $: vagrant ssh
 VM Information
 ------------
 **OS:** debian
+
 **IP:** 192.168.56.102
+
 **Host:** local.dev
+
 **MySQL User:** root
+
 **MySQL Password:** root
+
 **Web Server User:** www-data
+
 **Web Server Directory:** /var/www/site
+
 **Apache Installed Modules:** php, rewrite
+
